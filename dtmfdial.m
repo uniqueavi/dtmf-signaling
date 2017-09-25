@@ -28,7 +28,7 @@ for ii = 1:length(keyNames) % for each given keyname
     [r,c] = find(dtmf.keys==keyName); % find row and col for keyname
 
     % skip to the next keyname if this keyname was invalid
-    if (numel(r) == 0 | numel(c) == 0)
+    if (numel(r) == 0 || numel(c) == 0)
         continue
     end;
 
